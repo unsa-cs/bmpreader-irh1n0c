@@ -10,7 +10,7 @@ BMPImage* readBMP(const char *filename) {
     free(image);
     return NULL;
   }
-
+  //commit jose
   fread(image->header, sizeof(unsigned char), 54, file);
   image->width = *(int*)&image->header[18];
   image->height = *(int*)&image->header[22];
